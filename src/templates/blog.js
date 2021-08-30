@@ -5,6 +5,7 @@ import { BLOCKS } from '@contentful/rich-text-types';
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 import Layout from "../components/layout/layout"
+import Head from "../components/head";
 
 
 export const query = graphql`
@@ -55,6 +56,7 @@ const BlogPost = ({ data }) => {
 
   return (
     <Layout>
+      <Head title={data.blog.title} />
       <h1>{data.blog.title}</h1>
       <p>{data.blog.publishedDate}</p>
       {documentToReactComponents( JSON.parse(data.blog.body.raw), options )}
