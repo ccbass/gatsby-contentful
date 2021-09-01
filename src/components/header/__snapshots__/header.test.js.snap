@@ -6,7 +6,7 @@ exports[`Header Tests Renders as expected vs snapshot. 1`] = `
     <a
       href="/"
     >
-      Default Starter
+      Full-Stack Engineering Blog
     </a>
   </h1>
   <nav>

@@ -6,15 +6,39 @@ Gatsby.js application built using ContentfulCMS as data source.
 
 # Information
 
+## Deviations from Tutorial
+
+  A basic `Jest` testing workflow has been implemented and setup.  Testing can be triggered using:
+
+  ```shell
+  npm run test
+  ```
+
+  --
+
+  Github Actions have been implemented using a `nodejs.yml` configuration file.  This enables a actions to run the Jest testing and trigger a Netlify build/deploy webhook on completion of successful tests.`  
+
+  --
+
+  Due to significant issues with `@contentful/rich-text-react-render` and `embedded-asset-blocks`,   `gatsby-source-contentful/rich-text` is used to render rich text in `templates > blog.js`.
+
+  Unresolved breaking changes were introduced with the depreciation of `body { json }` to `body { raw }` in the GraphQL queries for Contentful.
+
+  Related Issues: [#119](https://github.com/contentful/rich-text/issues/119), [#28098](https://github.com/gatsbyjs/gatsby/discussions/28098), [#61](https://github.com/contentful/rich-text/issues/61), [#10592](https://github.com/gatsbyjs/gatsby/issues/10592), [#176](https://github.com/contentful/rich-text/issues/176)
+
+--
+
 ## Deployment
 
   [Netlify - Main](https://gatsby-contentful-demo-main.netlify.app/)
 
   Project hosted on Netlify. 
   
-  Utilizes Netlify's webhooks to trigger rebuilds on `code push` and new published content on `ContentfulCMS`.
+  Utilizes Netlify's webhooks to trigger rebuilds on new published content from the `ContentfulCMS` space.
+
+  --
   
-## Project Information
+# Project Overview
 
 1. **Created With:**
 
@@ -38,9 +62,19 @@ Gatsby.js application built using ContentfulCMS as data source.
     npm run develop
     ```
 
+    In order to utilize Github actions, a repository environment variable must be populated from Netlify:
+
+    This webhook ID should be acquired from the Netlify site under `Build & Deploy > Build Hooks`.
+  
+    Only the last characters from the URL are required. `https://api.netlify.com/build_hooks/***************`
+
+    ```shell
+    NETLIFY_WEBHOOK
+    ```
+
     Happy developing!
 
-# Project Structure
+## Structure
 
     .
     ├── src
