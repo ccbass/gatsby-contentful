@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Index Page Tests Renders as expected vs snapshot. 1`] = `
+<div>
+  <div>
+    <header>
+      <h1>
+        <a
+          href="/"
+        >
+          Full-Stack Engineering Blog
+        </a>
+      </h1>
+      <nav>
+        <ul>
+          <li>
+            <a
+              href="/"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              href="/about"
+            >
+              About
+            </a>
+          </li>
+          <li>
+            <a
+              href="/contact"
+            >
+              Contact
+            </a>
+          </li>
+          <li>
+            <a
+              href="/blog"
+            >
+              Blog
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <h1>
+      Welcome.
+    </h1>
+    <h2>
+      I'm Colin, an engineer based out of Oregon.
+    </h2>
+    <p>
+      Need a dev? 
+      <a
+        href="/contact"
+      >
+        Contact Me
+      </a>
+    </p>
+  </div>
+  <footer>
+    <p>
+      Created by 
+      CCB
+      , Copyright 2021
+    </p>
+  </footer>
+</div>
+`;

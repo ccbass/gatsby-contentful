@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Tests Renders as expected vs snapshot. 1`] = `
+<footer>
+  <p>
+    Created by 
+    CCB
+    , Copyright 2021
+  </p>
+</footer>
+`;
