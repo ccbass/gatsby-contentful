@@ -1,0 +1,24 @@
+name: Jest Testing
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    container: node:latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '14.x'
+    - run: npm ci
+    - run: npm test
+      env:
+        CI: true
+
+    - name: Netlify Build
+      run: curl -s -X POST "https://api.netlify.com/build_hooks/${NETLIFY_WEBHOOK}"
+      env:
+        NETLIFY_WEBHOOK: ${{ secrets.NETLIFY_WEBHOOK }}
