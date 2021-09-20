@@ -12,6 +12,7 @@ export const query = graphql`
       slug
       title
       publishedDate(formatString: "MMMM Do, YYYY")
+      minutesToRead
       body {
         raw
         references {
@@ -45,6 +46,7 @@ const BlogPost = ({ data }) => {
       <Head title={data.contentfulBlogPost.title} />
       <h1>{data.contentfulBlogPost.title}</h1>
       <p>{data.contentfulBlogPost.publishedDate}</p>
+      <p>Estimated Article Length: {data.contentfulBlogPost.minutesToRead} min</p>
       <div>{renderRichText(data.contentfulBlogPost.body, options)}</div>
     </Layout>
   )
