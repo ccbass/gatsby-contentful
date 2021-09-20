@@ -1,5 +1,8 @@
+require('dotenv').config()
+
 module.exports = {
   plugins: [
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     {
@@ -22,5 +25,6 @@ module.exports = {
   siteMetadata: {
     title: 'Full-Stack Engineering Blog',
     author: 'CCB',
+    siteUrl: 'https://gatsby-contentful-demo-main.netlify.app'
   },
 }

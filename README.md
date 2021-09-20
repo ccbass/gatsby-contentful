@@ -105,14 +105,28 @@ Two new directories can be found in the root directiory.  `/migration-scripts` c
 #### Validated Results
 
 `Short Slugs:`
-![Short Slugs](./public/short-blog-slugs.png)
+
+![Short Slugs](./static/short-blog-slugs.png)
 
 `Long Slugs with D/M/Y`
-![Long Slugs](./public/long-date-blog-slugs.png)
+
+![Long Slugs](./static/long-date-blog-slugs.png)
+
+--
+
+### Sitemap
+
+Sitemap has been added to the website using the `gatsby-plugin-sitemap` plugin with default values.  
+
+&nbsp; 
 
 ----
 
+&nbsp;
+
 **Below contains previous FE setup/work.**
+
+&nbsp;
 
 ----
 ## Deviations from Tutorial
