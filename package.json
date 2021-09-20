@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {
+    "transform": "node ./migration-scripts/blogSlugTransformer.js",
     "test": "jest --verbose",
     "build": "gatsby build",
     "develop": "env-cmd -f .env.development gatsby develop",
